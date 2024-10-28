@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VetoshkinFloor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="VetoshkinFloor" Height="450" Width="800" Icon="Images/Мастер пол.ico" FontFamily="Segoe UI" MinHeight="450" MinWidth="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame Grid.Row="0" Background="#F4E8D3" NavigationUIVisibility="Hidden"></Frame>
+        <Image Source="Images/Мастер пол.png" HorizontalAlignment="Left" VerticalAlignment="Center"></Image>
+        <TextBlock Text="Мастер Пол" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI"></TextBlock>
+        <Button Name="BtnBack" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Click="BtnBack_Click"></Button>
+        <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
+        <Frame Grid.Row="2" Background="#F4E8D3" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
