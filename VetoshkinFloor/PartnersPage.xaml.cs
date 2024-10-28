@@ -23,6 +23,8 @@ namespace VetoshkinFloor
         public PartnersPage()
         {
             InitializeComponent();
+            var currentPartner = VetoshkinFloorMasterEntities.GetContext().Partners.ToList();
+            PartnersListView.ItemsSource = currentPartner;
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
