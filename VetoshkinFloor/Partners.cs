@@ -11,9 +11,11 @@ namespace VetoshkinFloor
 {
     using System;
     using System.Collections.Generic;
+    using System.Linq;
+    using System.Windows;
     using System.Windows.Media;
     using System.Xml.Schema;
-    
+
     public partial class Partners
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,10 +25,11 @@ namespace VetoshkinFloor
             this.PartnerProduct = new HashSet<PartnerProduct>();
             this.PointSales = new HashSet<PointSales>();
         }
-    
+
         public int PartnerID { get; set; }
         public string OrganizationTypeName { get; set; }
         public int PartnerType { get; set; }
+        public int Quantity { get; set; }
         public string PartnerCompanyName { get; set; }
         public string PartnerDirectorSurname { get; set; }
         public string PartnerDirectorName { get; set; }
@@ -41,7 +44,7 @@ namespace VetoshkinFloor
         public string PartnerCompanyINN { get; set; }
         public double PartnerRating { get; set; }
         public byte[] PartnerLogo { get; set; }
-    
+
         public virtual OrganizationForm OrganizationForm { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PartnerMinCostHistory> PartnerMinCostHistory { get; set; }
@@ -55,6 +58,59 @@ namespace VetoshkinFloor
             get
             {
                 return OrganizationForm.OrganizationTypeName;
+            }
+        }
+
+        private int PartnerDiscount
+        {
+            get
+            {
+
+                if (VetoshkinFloorMasterEntities.GetContext().PartnerProduct.Where(p => p.Partner == PartnerID).Count() > 0)
+                {
+                    var PartnerProdQuantity = VetoshkinFloorMasterEntities.GetContext().PartnerProduct.Where(p => p.Partner == PartnerID).Sum(p => p.Quantity);
+                    Console.WriteLine(PartnerProdQuantity);
+                    if (PartnerProdQuantity >= 10000 && PartnerProdQuantity < 50000)
+                    {
+                        return 5;
+                    }
+                    else if (PartnerProdQuantity >= 50000 && PartnerProdQuantity < 300000)
+                    {
+                        return 10;
+                    }
+                    else if (PartnerProdQuantity >= 300000)
+                    {
+                        return 15;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                else
+                {
+                    return -1;
+                }
+                
+            }
+        }
+
+        public string PartnerDiscountDisplay
+        {
+            get
+            {
+                if (PartnerDiscount == 0)
+                {
+                    return "Нет скидки";
+                }
+                else if (PartnerDiscount == -1)
+                {
+                    return "Нет продаж";
+                }
+                else
+                {
+                    return PartnerDiscount.ToString() + "%";
+                }
             }
         }
     }

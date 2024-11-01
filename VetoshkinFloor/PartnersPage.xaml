@@ -18,23 +18,32 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="600"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
-                            <ColumnDefinition Width="auto"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel Orientation="Horizontal" Grid.Row="0">
-                            <TextBlock Text="{Binding PartnerTypeString}"></TextBlock>
-                            <TextBlock Text=" | "></TextBlock>
-                            <TextBlock Text="{Binding PartnerCompanyName}"></TextBlock>
-                        </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal" Grid.Row="1">
-                            <TextBlock Text="{Binding PartnerDirectorSurname}"></TextBlock>
-                            <TextBlock Text="{Binding PartnerDirectorName}" Margin="5,0"></TextBlock>
-                            <TextBlock Text="{Binding PartnerDirectorPatronymic}"></TextBlock>
+                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                            <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                <TextBlock Text="{Binding PartnerTypeString}" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text=" | " FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding PartnerCompanyName}" FontWeight="Bold"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="1">
+                                <TextBlock Text="{Binding PartnerDirectorSurname}"></TextBlock>
+                                <TextBlock Text="{Binding PartnerDirectorName}" Margin="5,0"></TextBlock>
+                                <TextBlock Text="{Binding PartnerDirectorPatronymic}"></TextBlock>
+                            </StackPanel>
+
+                            <TextBlock Grid.Row="2" Text="{Binding PartnerPhoneNumber}"></TextBlock>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="2">
+                                <TextBlock Text="Рейтинг: "></TextBlock>
+                                <TextBlock Text="{Binding PartnerRating}"></TextBlock>
+                            </StackPanel>
                         </StackPanel>
 
-                        <TextBlock Grid.Row="2" Text="{Binding PartnerPhoneNumber}"></TextBlock>
+                        <TextBlock Text="{Binding PartnerDiscountDisplay}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"></TextBlock>
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"></RowDefinition>
