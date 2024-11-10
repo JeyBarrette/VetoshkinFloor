@@ -5,15 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:VetoshkinFloor"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="665" d:DesignWidth="850"
       Title="PartnersPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ListView Name="PartnersListView" Grid.Row="1">
+        <Button Name="AddPartnerBTN" Content="Добавить" Click="AddPartnerBTN_Click" Margin="5" HorizontalAlignment="Center" Grid.Column="1" Width="150"></Button>
+
+        <ListView Name="PartnersListView" Grid.Row="1" VirtualizingPanel.ScrollUnit="Pixel">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -44,6 +47,7 @@
                         </StackPanel>
 
                         <TextBlock Text="{Binding PartnerDiscountDisplay}" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="20"></TextBlock>
+                        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="20,12" Name="EditPartnerBTN" Content="Редактировать" Click="EditPartnerBTN_Click"></Button>
 
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"></RowDefinition>

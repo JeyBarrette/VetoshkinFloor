@@ -12,10 +12,7 @@ namespace VetoshkinFloor
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Windows;
-    using System.Windows.Media;
-    using System.Xml.Schema;
-
+    
     public partial class Partners
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -44,14 +41,6 @@ namespace VetoshkinFloor
         public string PartnerCompanyINN { get; set; }
         public double PartnerRating { get; set; }
         public byte[] PartnerLogo { get; set; }
-
-        public virtual OrganizationForm OrganizationForm { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PartnerMinCostHistory> PartnerMinCostHistory { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PartnerProduct> PartnerProduct { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PointSales> PointSales { get; set; }
 
         public string PartnerTypeString
         {
@@ -91,7 +80,7 @@ namespace VetoshkinFloor
                 {
                     return -1;
                 }
-                
+
             }
         }
 
@@ -113,5 +102,14 @@ namespace VetoshkinFloor
                 }
             }
         }
+ 
+
+        public virtual OrganizationForm OrganizationForm { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PartnerMinCostHistory> PartnerMinCostHistory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PartnerProduct> PartnerProduct { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PointSales> PointSales { get; set; }
     }
 }

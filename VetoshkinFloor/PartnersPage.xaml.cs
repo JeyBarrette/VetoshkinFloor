@@ -29,7 +29,18 @@ namespace VetoshkinFloor
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
+            var currentPartner = VetoshkinFloorMasterEntities.GetContext().Partners.ToList();
+            PartnersListView.ItemsSource = currentPartner;
+        }
 
+        private void AddPartnerBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddPartnerPage(null));
+        }
+
+        private void EditPartnerBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AddPartnerPage((sender as Button).DataContext as Partners));
         }
     }
 }

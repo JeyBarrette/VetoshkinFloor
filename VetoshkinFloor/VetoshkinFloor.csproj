@@ -64,72 +64,79 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddPartnerPage.xaml.cs">
+      <DependentUpon>AddPartnerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Employees.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Materials.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MaterialsCount.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MaterialsType.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MeasurementUnits.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="OrganizationForm.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PartnerMinCostHistory.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PartnerProduct.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Partners.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="PointSales.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductCount.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Products.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductType.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Suppliers.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplierType.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
     <Compile Include="SupplyHistory.cs">
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="VetoshkinFloorModel.Context.cs">
+    <Compile Include="VetoshkinFloorMasterModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VetoshkinFloorModel.Context.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="VetoshkinFloorModel.cs">
+    <Compile Include="VetoshkinFloorMasterModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VetoshkinFloorModel.tt</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="VetoshkinFloorModel.Designer.cs">
+    <Compile Include="VetoshkinFloorMasterModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VetoshkinFloorModel.edmx</DependentUpon>
+      <DependentUpon>VetoshkinFloorMasterModel.edmx</DependentUpon>
     </Compile>
+    <Page Include="AddPartnerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -174,12 +181,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="VetoshkinFloorModel.edmx">
+    <EntityDeploy Include="VetoshkinFloorMasterModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>VetoshkinFloorModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>VetoshkinFloorMasterModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="VetoshkinFloorModel.edmx.diagram">
-      <DependentUpon>VetoshkinFloorModel.edmx</DependentUpon>
+    <None Include="VetoshkinFloorMasterModel.edmx.diagram">
+      <DependentUpon>VetoshkinFloorMasterModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -190,19 +197,20 @@
     <Resource Include="Images\Мастер пол.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="VetoshkinFloorModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>VetoshkinFloorModel.Context.cs</LastGenOutput>
-      <DependentUpon>VetoshkinFloorModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="VetoshkinFloorModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>VetoshkinFloorModel.edmx</DependentUpon>
-      <LastGenOutput>VetoshkinFloorModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Resource Include="Images\picture.png" />
+    <Content Include="VetoshkinFloorMasterModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VetoshkinFloorMasterModel.edmx</DependentUpon>
+      <LastGenOutput>VetoshkinFloorMasterModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="VetoshkinFloorMasterModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>VetoshkinFloorMasterModel.edmx</DependentUpon>
+      <LastGenOutput>VetoshkinFloorMasterModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

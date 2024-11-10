@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище VetoshkinFloorMasterModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище FloorMasterModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeID" />
@@ -486,7 +486,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище VetoshkinFloorMasterModelContainer">
+        <EntityContainer Name="Хранилище FloorMasterModelContainer">
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Materials" EntityType="Self.Materials" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MaterialsCount" EntityType="Self.MaterialsCount" Schema="dbo" store:Type="Tables" />
@@ -600,7 +600,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="VetoshkinFloorMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="FloorMasterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Employees">
           <Key>
             <PropertyRef Name="EmployeeID" />
@@ -1136,9 +1136,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище VetoshkinFloorMasterModelContainer" CdmEntityContainer="VetoshkinFloorMasterEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище FloorMasterModelContainer" CdmEntityContainer="VetoshkinFloorMasterEntities">
           <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Employees">
+            <EntityTypeMapping TypeName="FloorMasterModel.Employees">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="EmployeeName" ColumnName="EmployeeName" />
@@ -1160,7 +1160,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Materials">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Materials">
+            <EntityTypeMapping TypeName="FloorMasterModel.Materials">
               <MappingFragment StoreEntitySet="Materials">
                 <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
                 <ScalarProperty Name="MaterialType" ColumnName="MaterialType" />
@@ -1177,7 +1177,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MaterialsCount">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.MaterialsCount">
+            <EntityTypeMapping TypeName="FloorMasterModel.MaterialsCount">
               <MappingFragment StoreEntitySet="MaterialsCount">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
@@ -1187,7 +1187,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MaterialsType">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.MaterialsType">
+            <EntityTypeMapping TypeName="FloorMasterModel.MaterialsType">
               <MappingFragment StoreEntitySet="MaterialsType">
                 <ScalarProperty Name="MaterialTypeID" ColumnName="MaterialTypeID" />
                 <ScalarProperty Name="MaterialType" ColumnName="MaterialType" />
@@ -1196,7 +1196,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MeasurementUnits">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.MeasurementUnits">
+            <EntityTypeMapping TypeName="FloorMasterModel.MeasurementUnits">
               <MappingFragment StoreEntitySet="MeasurementUnits">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="MeasurementUnit" ColumnName="MeasurementUnit" />
@@ -1204,7 +1204,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrganizationForm">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.OrganizationForm">
+            <EntityTypeMapping TypeName="FloorMasterModel.OrganizationForm">
               <MappingFragment StoreEntitySet="OrganizationForm">
                 <ScalarProperty Name="OrganizationTypeID" ColumnName="OrganizationTypeID" />
                 <ScalarProperty Name="OrganizationTypeName" ColumnName="OrganizationTypeName" />
@@ -1212,7 +1212,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PartnerMinCostHistory">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.PartnerMinCostHistory">
+            <EntityTypeMapping TypeName="FloorMasterModel.PartnerMinCostHistory">
               <MappingFragment StoreEntitySet="PartnerMinCostHistory">
                 <ScalarProperty Name="ArticleNumber" ColumnName="ArticleNumber" />
                 <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
@@ -1222,7 +1222,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PartnerProduct">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.PartnerProduct">
+            <EntityTypeMapping TypeName="FloorMasterModel.PartnerProduct">
               <MappingFragment StoreEntitySet="PartnerProduct">
                 <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="Partner" ColumnName="Partner" />
@@ -1235,7 +1235,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Partners">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Partners">
+            <EntityTypeMapping TypeName="FloorMasterModel.Partners">
               <MappingFragment StoreEntitySet="Partners">
                 <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
                 <ScalarProperty Name="PartnerType" ColumnName="PartnerType" />
@@ -1257,7 +1257,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="PointSales">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.PointSales">
+            <EntityTypeMapping TypeName="FloorMasterModel.PointSales">
               <MappingFragment StoreEntitySet="PointSales">
                 <ScalarProperty Name="PointSaleID" ColumnName="PointSaleID" />
                 <ScalarProperty Name="PointSaleIndex" ColumnName="PointSaleIndex" />
@@ -1270,7 +1270,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductCount">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.ProductCount">
+            <EntityTypeMapping TypeName="FloorMasterModel.ProductCount">
               <MappingFragment StoreEntitySet="ProductCount">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductArticle" ColumnName="ProductArticle" />
@@ -1280,7 +1280,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Products">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Products">
+            <EntityTypeMapping TypeName="FloorMasterModel.Products">
               <MappingFragment StoreEntitySet="Products">
                 <ScalarProperty Name="ProductArticle" ColumnName="ProductArticle" />
                 <ScalarProperty Name="ProductType" ColumnName="ProductType" />
@@ -1302,7 +1302,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductType">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.ProductType">
+            <EntityTypeMapping TypeName="FloorMasterModel.ProductType">
               <MappingFragment StoreEntitySet="ProductType">
                 <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
                 <ScalarProperty Name="ProductTypeName" ColumnName="ProductTypeName" />
@@ -1311,7 +1311,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Role">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Role">
+            <EntityTypeMapping TypeName="FloorMasterModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
@@ -1319,7 +1319,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Suppliers">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.Suppliers">
+            <EntityTypeMapping TypeName="FloorMasterModel.Suppliers">
               <MappingFragment StoreEntitySet="Suppliers">
                 <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
                 <ScalarProperty Name="SupplierType" ColumnName="SupplierType" />
@@ -1329,7 +1329,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SupplierType">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.SupplierType">
+            <EntityTypeMapping TypeName="FloorMasterModel.SupplierType">
               <MappingFragment StoreEntitySet="SupplierType">
                 <ScalarProperty Name="SupplierTypeID" ColumnName="SupplierTypeID" />
                 <ScalarProperty Name="SupplierTypeName" ColumnName="SupplierTypeName" />
@@ -1337,7 +1337,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SupplyHistory">
-            <EntityTypeMapping TypeName="VetoshkinFloorMasterModel.SupplyHistory">
+            <EntityTypeMapping TypeName="FloorMasterModel.SupplyHistory">
               <MappingFragment StoreEntitySet="SupplyHistory">
                 <ScalarProperty Name="SupplyID" ColumnName="SupplyID" />
                 <ScalarProperty Name="Supplier" ColumnName="Supplier" />
@@ -1347,7 +1347,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="PointSalesPartners" TypeName="VetoshkinFloorMasterModel.PointSalesPartners" StoreEntitySet="PointSalesPartners">
+          <AssociationSetMapping Name="PointSalesPartners" TypeName="FloorMasterModel.PointSalesPartners" StoreEntitySet="PointSalesPartners">
             <EndProperty Name="Partners">
               <ScalarProperty Name="PartnerID" ColumnName="PartnerID" />
             </EndProperty>
@@ -1355,7 +1355,7 @@
               <ScalarProperty Name="PointSaleID" ColumnName="PointSaleID" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="ProductsMaterials" TypeName="VetoshkinFloorMasterModel.ProductsMaterials" StoreEntitySet="ProductsMaterials">
+          <AssociationSetMapping Name="ProductsMaterials" TypeName="FloorMasterModel.ProductsMaterials" StoreEntitySet="ProductsMaterials">
             <EndProperty Name="Materials">
               <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
             </EndProperty>
@@ -1363,7 +1363,7 @@
               <ScalarProperty Name="ProductArticle" ColumnName="ProductArticle" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="SupplyMaterial" TypeName="VetoshkinFloorMasterModel.SupplyMaterial" StoreEntitySet="SupplyMaterial">
+          <AssociationSetMapping Name="SupplyMaterial" TypeName="FloorMasterModel.SupplyMaterial" StoreEntitySet="SupplyMaterial">
             <EndProperty Name="Materials">
               <ScalarProperty Name="MaterialID" ColumnName="MaterialID" />
             </EndProperty>
